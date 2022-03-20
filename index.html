@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Quiz</title>
+    <link rel="stylesheet" href="./Assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="game">
+          <div id ="quizContainer">
+            <div>
+                <a href="#" id="viewHighScore">View High Scores</a>
+            </div>
+            <p id="timer">
+                Time: <span id="timeLeft"></span>
+            </p>
+            <button id="start">Start Quiz</button>
+          </div>
+          <div id="questions" class="hide">
+            <h3 id="questionTitle"></h3>
+            <div id="questionChoices">
+            </div>
+          </div>
+          <div id="finishQuiz" class="hide">
+            <h3>Quiz Completed!</h3>
+            <p>Your final score: <span id="finalScore"></span></p>
+            <form>
+                <p class="initials">Enter your initials: <input id="initialInput" type="text">
+                <button type="submit" id="submitButton">Submit</button>
+                </p>
+            </form>
+          </div>
+          <div id="viewHighScores" class="hide">
+            <h3>HighScores:</h3>
+            <ol id="highScores"></ol>
+            <button id="retakeQuiz">Retry</button>
+          </div>
+        </div>
+    </div>
+    <script src="./Assets/script.js"></script>
+</body>
+</html>

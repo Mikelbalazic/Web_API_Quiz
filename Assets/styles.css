@@ -1,0 +1,47 @@
+/* body styles */
+body{
+    background-color: #41491a;
+    color: white;
+    font-family: 'Courier';
+}
+/* container styles */
+.container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 50vh;
+}
+/* container content styles */
+a{
+    color: white;
+    transition-duration: 0.3s;
+}
+a:hover{
+    color: #ff6000;
+}
+.hide{
+    display: none;
+}
+button{
+    transition-duration: 0.5s;
+    background: none;
+    font-family: 'Courier';
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: #ff6000;
+    color: white;
+}
+#timeLeft{
+    color: #ff6000;
+}
+.initials{
+    font-size: 24px;;
+}
