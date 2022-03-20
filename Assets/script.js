@@ -29,7 +29,6 @@ const questions = [
 var time = 60;
 var currentQuestionIndex = 0;
 var timerId;
-
 var questionDiv = document.getElementById("questions");
 var questionChoiceDiv = document.getElementById("questionChoices");
 var timeLeft = document.getElementById("timeLeft");
@@ -62,6 +61,10 @@ showQuestions()
 function tickingClock(){
     time--;
     timeLeft.textContent = time;
+    if (time <= 0){
+        location.reload()
+        window.alert("You have run out of time! You must restart the quiz.")
+    }
 }
 
 function showQuestions(){
@@ -164,6 +167,5 @@ function displayHighScores(){
 }
 
 retakeQuiz.addEventListener('click', function(){
-        quizContainer.style.display = 'block';
-        viewHighScores.style.display = 'none'; 
+        location.reload()
     })
