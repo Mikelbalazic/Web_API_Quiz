@@ -16,13 +16,6 @@ body{
     min-height: 50vh;
 }
 /* container content styles */
-a{
-    color: white;
-    transition-duration: 0.3s;
-}
-a:hover{
-    color: #ff6000;
-}
 .hide{
     display: none;
 }

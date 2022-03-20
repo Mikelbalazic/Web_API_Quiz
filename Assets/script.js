@@ -36,6 +36,7 @@ var timeLeft = document.getElementById("timeLeft");
 var startBtn = document.getElementById("start");
 var finishQuiz = document.getElementById("finishQuiz");
 var quizContainer = document.getElementById("quizContainer");
+var timer = document.getElementById("timer");
 var correct = 0;
 var finalScore = document.getElementById("finalScore");
 var initialInput = document.getElementById("initialInput");
@@ -50,6 +51,7 @@ startBtn.onclick = startQuiz;
 function startQuiz(){
     // show questions div when start button is clicked
 questionDiv.removeAttribute("class")
+timer.removeAttribute("class")
     // start timer when startBtn clicked
 timerId = setInterval(tickingClock, 1000)
 
@@ -118,7 +120,8 @@ function endGame(){
     finalScore.textContent = correct;
 }
 
-submitButton.addEventListener('click', function(){
+submitButton.addEventListener('click', (event) => {
+    event.preventDefault();
     let userInput = initialInput.value
     const userData = {
         name: userInput, // name: 'mb'
@@ -161,7 +164,6 @@ function displayHighScores(){
 }
 
 retakeQuiz.addEventListener('click', function(){
-        questions.removeAttribute("class")
-        questionDiv.removeAttribute("class")
+        quizContainer.style.display = 'block';
         viewHighScores.style.display = 'none'; 
     })
